@@ -18,7 +18,9 @@ public class FurnitureController {
 
     @PostMapping("/saveFurniture")
     public ResponseEntity<String> saveFurniture(@RequestBody Furniture furniture) {
+        System.out.println("Saving Furniture: " + furniture);
         furnitureRepository.save(furniture);
         return ResponseEntity.ok("Furniture saved successfully");
     }
+
 }
